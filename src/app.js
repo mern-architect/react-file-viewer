@@ -9,7 +9,7 @@ import sampleHouse from '../example_files/SampleHouse.wexbim';
 import solarImage from '../example_files/02-USVI-Solar.jpg';
 import docx from '../example_files/SampleSpec.docx';
 import doc from '../example_files/sample.doc';
-import csv from '../example_files/Total_Crime.csv';
+import csv from '../example_files/sample_products.csv';
 import mp4 from '../example_files/small.mp4';
 import xlsx from '../example_files/SimpleSpreadsheet.xlsx';
 import photo360 from '../example_files/360photo.jpg';
@@ -33,32 +33,14 @@ const App = () => {
 
   return (
     <div>
-      <p>Scroll down for more demos.</p>
-
-      <div style={{
-        height: '100vh',
-        overflow: 'hidden',
-      }}>
-        <h2>xlsx demo</h2>
+      <div>
         <FileViewer
-          fileType="xlsx"
-          filePath={xlsx}
+          fileType="csv"
+          filePath={csv}
           onGridSort={() => null}
         />
       </div>
 
-      <div style={{
-        backgroundColor: 'white',
-        margin: 'auto',
-      }}>
-        <h2>image demo</h2>
-        <button onClick={() => setDemoImage(getNextDemoImage(demoImage))}>Swap image</button>
-        <FileViewer
-          fileType="jpeg"
-          filePath={demoImage}
-          onGridSort={() => null}
-        />
-      </div>
     </div>
   );
 };

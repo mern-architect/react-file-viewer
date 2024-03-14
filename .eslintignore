@@ -3,3 +3,4 @@ node_modules/**/*
 dist/**/*
 scripts/start.js
 src/app.js
+src/
