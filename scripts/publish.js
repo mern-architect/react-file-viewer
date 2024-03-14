@@ -76,7 +76,7 @@ inquirer.prompt([
   // publish
   try {
     console.log(runColor('publishing to npm'));
-    execSync('npm publish', execOpts);
+    execSync('npm publish --access public', execOpts);
   } catch (e) {
     console.log(errColor('Publishing failed'));
     return;
